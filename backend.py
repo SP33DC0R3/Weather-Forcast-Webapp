@@ -1,6 +1,7 @@
 import requests
+import os
 
-api_key = "3e3bbd8a6c780941f0435a929e4bfedf"
+api_key = os.getenv("OPENWEATHER_API_KEY")
 
 
 def get_data(place, forecast_days=None):
@@ -14,4 +15,4 @@ def get_data(place, forecast_days=None):
 
 
 if __name__ == "__main__":
-    print(get_data("Faisalabad", 4))
+    print(get_data("Toronto", 4))
